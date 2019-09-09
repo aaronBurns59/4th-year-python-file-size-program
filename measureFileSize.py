@@ -10,6 +10,7 @@ def approx_size(size, a_kilobyte_is_1024_bytes = True):
 
     # sets multiple to 1024 if the above second argument is true
     multiple = 1024 if a_kilobyte_is_1024_bytes else 1000
+    # a for loop that determines the suffix the value entered in size will get
     for suffix in SUFFIXES[multiple]:
         # gets the value in the array that is a division of whatever the size is
         size /=multiple
@@ -22,4 +23,7 @@ if __name__ == '__main__':
     print(approx_size(1000000000000, False))
     print(approx_size(1000000000000))
     print(approx_size(1000, False))
+    print(approx_size(1000))
+    print(approx_size(100000, False))
+    print(approx_size(100000))
 
